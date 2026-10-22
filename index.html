@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <script>
   // Preferências de leitura antes de desenhar a página (evita piscar).
@@ -43,7 +43,6 @@
   "image": "https://ribeirovilelaribeiro.com.br/img/og.jpg",
   "description": "Advocacia previdenciária: aposentadorias, benefícios por incapacidade, BPC/LOAS, pensão por morte, salário-maternidade, revisão e planejamento previdenciário.",
   "telephone": "+55 82 99327-8827",
-  "email": "ribeirovilelaribeiro.adv@gmail.com",
   "areaServed": [
     "Maceió",
     "União dos Palmares",
@@ -78,151 +77,131 @@
   <a href="#rodape">Ir para o rodapé</a>
 </nav>
 
-<div class="acess" role="region" aria-label="Ferramentas de leitura">
-  <div class="acess-in">
-    <span class="acess-rot">Leitura</span>
-    <button type="button" data-fonte="-1" aria-label="Diminuir o tamanho do texto">A−</button>
-    <button type="button" data-fonte="0" aria-label="Tamanho normal do texto">A</button>
-    <button type="button" data-fonte="1" aria-label="Aumentar o tamanho do texto">A+</button>
-    <button type="button" data-contraste-btn aria-pressed="false">Alto contraste</button>
-    <button type="button" data-ouvir aria-pressed="false">
-      <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-som"/></svg>
-      <span>Ouvir esta página</span>
-    </button>
-  </div>
-</div>
-
 <header class="topo">
   <div class="topo-in">
     <a class="marca" href="/" aria-label="Ribeiro, Vilela & Ribeiro, página inicial">
-      <img src="/img/logo-dourado.png" alt="Ribeiro, Vilela & Ribeiro Advogados Associados" width="1200" height="145">
+      <img src="/img/logo-cabecalho-verde.png" alt="Ribeiro, Vilela & Ribeiro Advogados Associados" width="1399" height="168">
     </a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
-      <span class="menu-btn-ic" aria-hidden="true"><span></span><span></span><span></span></span>
-      <span class="menu-btn-txt">Menu</span>
-    </button>
-    <nav class="menu" id="menu" aria-label="Seções do site">
-      <div class="menu-links">
-        <a href="/#atuacao">Como ajudamos</a>
-        <a href="/#como-funciona">Como funciona</a>
-        <a href="/#escritorio">Escritório</a>
-        <a href="/#duvidas">Dúvidas</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <div class="menu" id="menu">
+      <nav class="menu-links" aria-label="Seções do site">
+        <a href="/#beneficios">Benefícios</a>
+        <a href="/#como-trabalhamos">Como trabalhamos</a>
+        <a href="/#advogados">Advogados</a>
         <a href="/#unidades">Unidades</a>
-        <a href="/seguranca">Segurança</a>
+      </nav>
+      <div class="menu-acoes">
+        <div class="acess">
+          <button type="button" class="link-topo" aria-expanded="false" aria-controls="acess-painel" data-acess-btn>Letra maior</button>
+          <div class="acess-painel" id="acess-painel" hidden>
+            <p class="acess-tit">Tamanho do texto</p>
+            <div class="acess-linha">
+              <button type="button" data-fonte="-1" aria-label="Diminuir o tamanho do texto">A−</button>
+              <button type="button" data-fonte="0" aria-label="Tamanho normal do texto">A</button>
+              <button type="button" data-fonte="1" aria-label="Aumentar o tamanho do texto">A+</button>
+            </div>
+            <button type="button" class="acess-opcao" data-contraste-btn aria-pressed="false">Alto contraste</button>
+            <button type="button" class="acess-opcao" data-ouvir aria-pressed="false"><span>Ouvir esta página</span></button>
+            <button type="button" class="acess-opcao" data-libras>Tradução em Libras</button>
+          </div>
+        </div>
+        <a class="btn btn-verde btn-peq" href="https://wa.me/5582993278827?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20um%20benef%C3%ADcio%20do%20INSS." target="_blank" rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whats"/></svg> WhatsApp
+        </a>
       </div>
-      <button type="button" class="btn btn-vidro btn-peq" data-abrir="cliente">Já sou cliente</button>
-      <a class="btn btn-ouro btn-peq" href="https://wa.me/5582993278827?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20um%20benef%C3%ADcio%20do%20INSS." target="_blank" rel="noopener">
-        <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whats"/></svg> WhatsApp
-      </a>
-    </nav>
+    </div>
   </div>
 </header>
 
 <main id="conteudo" tabindex="-1">
 <!-- ABERTURA -->
-<section class="hero sob-topo">
+<section class="hero">
   <div class="hero-in">
-    <p class="chip">Advocacia previdenciária · Maceió e União dos Palmares</p>
-    <h1>Seu benefício do INSS, <em>explicado com calma.</em></h1>
-    <p class="hero-texto">Aposentadorias, auxílios, pensões e BPC/LOAS. Do primeiro pedido até a Justiça Federal, acompanhado de perto.</p>
-    <div class="hero-acoes">
-      <a class="btn btn-ouro btn-grande" href="https://wa.me/5582993278827?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20um%20benef%C3%ADcio%20do%20INSS." target="_blank" rel="noopener">
-        <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whats"/></svg>
-        Quero orientação
-      </a>
-      <button type="button" class="btn btn-vidro btn-grande" data-abrir="cliente">Já sou cliente</button>
+    <div class="hero-texto">
+      <p class="rotulo">Advocacia previdenciária · Maceió e União dos Palmares</p>
+      <h1>Benefícios do INSS,<br> do primeiro pedido<br> à Justiça Federal.</h1>
+      <span class="filete-ouro" aria-hidden="true"></span>
+      <p class="hero-lead">Aposentadorias, auxílios, pensões e BPC/LOAS para trabalhadores urbanos e rurais, pessoas com deficiência e suas famílias.</p>
+      <div class="hero-acoes">
+        <a class="btn btn-verde" href="https://wa.me/5582993278827?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20um%20benef%C3%ADcio%20do%20INSS." target="_blank" rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whats"/></svg> Falar com o escritório
+        </a>
+        <a class="link" href="#como-trabalhamos">Como trabalhamos →</a>
+      </div>
     </div>
-    <p class="hero-calma">Você não precisa enviar documentos neste primeiro contato.</p>
-  </div>
-
-  <div class="busca" id="ajuda">
-    <div class="busca-card">
-      <h2 id="busca-tit">Como podemos ajudar?</h2>
-      <form class="busca-campo" role="search" data-busca-form>
-        <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-busca"/></svg>
-        <label class="so-leitor" for="busca">Escreva o que você procura</label>
-        <input id="busca" type="search" placeholder="Ex.: BPC, perícia, roça" autocomplete="off">
-        <button type="submit" class="btn btn-verde">Buscar</button>
-      </form>
-      <p class="busca-sug"><span>Buscas comuns:</span>
-        <button type="button" data-sugestao="BPC">BPC para idoso</button>
-        <button type="button" data-sugestao="negou">Benefício negado</button>
-        <button type="button" data-sugestao="roça">Aposentadoria rural</button>
-        <button type="button" data-sugestao="perícia">Perícia do INSS</button>
-        <button type="button" data-sugestao="pensão">Pensão por morte</button>
-      </p>
-      <p class="busca-resultado" aria-live="polite" data-busca-resultado></p>
-    </div>
+    <aside class="timbre" aria-label="Dados do escritório">
+      <dl>
+        <div><dt>Unidades</dt><dd>Maceió · União dos Palmares</dd></div>
+        <div><dt>Atendimento</dt><dd>Presencial, por telefone ou WhatsApp</dd></div>
+        <div><dt>Advogados</dt><dd>Thiago Vilela, OAB/AL 22.792<br>Gleyson Ribeiro, OAB/AL 6.556</dd></div>
+        <div><dt>Telefone e WhatsApp</dt><dd class="timbre-tel"><a href="tel:+5582993278827">(82) 99327-8827</a></dd></div>
+      </dl>
+    </aside>
   </div>
 </section>
 
-<!-- MOSAICO DAS SITUAÇÕES -->
-<section class="mosaico" id="atuacao" aria-labelledby="momentos-tit">
+<!-- BENEFÍCIOS -->
+<section class="secao" id="beneficios" aria-labelledby="beneficios-tit">
   <div class="secao-in">
-    <div class="cab">
+    <div class="cab-duplo">
       <div>
-        <p class="rotulo rotulo-claro">Áreas de atuação</p>
-        <h2 id="momentos-tit">Em que momento você está?</h2>
+        <p class="rotulo">Benefícios</p>
+        <h2 id="beneficios-tit">Em que situação você está?</h2>
       </div>
-      <p>Toque na situação mais parecida com a sua para ver quem pode ter direito, os documentos para separar e o próximo passo.</p>
+      <div class="busca">
+        <form class="busca-campo" role="search" data-busca-form>
+          <label for="busca">Procurar por assunto</label>
+          <div class="busca-linha">
+            <input id="busca" type="search" placeholder="Por exemplo: BPC, perícia, roça" autocomplete="off">
+            <button type="submit" class="link">Procurar</button>
+          </div>
+        </form>
+        <p class="busca-resultado" aria-live="polite" data-busca-resultado></p>
+      </div>
     </div>
 
-    <div class="bento">
-      <button type="button" class="tile tile-foto a-roca revelar" style="--foto:url(/img/fotos/rural.jpg)" data-momento="m-roca"
+    <ol class="indice">
+      <li><button type="button" class="item" data-momento="m-roca"
         data-busca="roça roca rural campo lavrador agricultor segurado especial sindicato pescador aposentadoria rural">
-        <span class="tile-seta" aria-hidden="true">↗</span>
-        <span class="tile-rot">Segurado especial</span>
-        <strong>Trabalha ou trabalhou na roça?</strong>
-        <small>Aposentadoria rural e direitos de quem vive do campo.</small>
-      </button>
-      <button type="button" class="tile tile-foto a-doenca revelar" style="--foto:url(/img/fotos/trabalhador.jpg)" data-momento="m-doenca"
+        <span class="item-txt"><strong>Trabalho rural e segurado especial</strong><small>Aposentadoria rural e direitos de quem vive do campo</small></span>
+        <span class="item-seta" aria-hidden="true">→</span>
+      </button></li>
+      <li><button type="button" class="item" data-momento="m-doenca"
         data-busca="doença doente acidente incapacidade auxílio-doença auxilio doenca invalidez auxílio-acidente perícia pericia laudo trabalhar">
-        <span class="tile-seta" aria-hidden="true">↗</span>
-        <strong>Doença ou acidente?</strong>
-        <small>Auxílio-doença, invalidez e auxílio-acidente.</small>
-      </button>
-      <button type="button" class="tile tile-foto a-bpc revelar" style="--foto:url(/img/fotos/cadeira.jpg)" data-momento="m-bpc"
+        <span class="item-txt"><strong>Doença, invalidez ou acidente</strong><small>Auxílio-doença, aposentadoria por invalidez e auxílio-acidente</small></span>
+        <span class="item-seta" aria-hidden="true">→</span>
+      </button></li>
+      <li><button type="button" class="item" data-momento="m-bpc"
         data-busca="bpc loas idoso idosa deficiência deficiencia baixa renda cadúnico cadunico assistencial">
-        <span class="tile-seta" aria-hidden="true">↗</span>
-        <strong>BPC/LOAS</strong>
-        <small>Pessoa idosa ou com deficiência, de baixa renda.</small>
-      </button>
-      <button type="button" class="tile tile-ouro a-negou revelar" data-momento="m-negou"
-        data-busca="negou negado negada negativa indeferido indeferimento recurso justiça justica federal ação acao processo cortado cessado">
-        <span class="tile-seta" aria-hidden="true">↗</span>
-        <svg class="tile-ic" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-balanca"/></svg>
-        <strong>O INSS negou ou cortou?</strong>
-        <small>Recurso no INSS e ação na Justiça Federal.</small>
-      </button>
-      <button type="button" class="tile tile-verde a-apos revelar" data-momento="m-apos"
+        <span class="item-txt"><strong>BPC/LOAS</strong><small>Pessoa idosa ou com deficiência, de família de baixa renda</small></span>
+        <span class="item-seta" aria-hidden="true">→</span>
+      </button></li>
+      <li><button type="button" class="item" data-momento="m-apos"
         data-busca="idade aposentar aposentadoria tempo contribuição contribuicao especial insalubre perigosa híbrida hibrida deficiência transição">
-        <span class="tile-seta" aria-hidden="true">↗</span>
-        <svg class="tile-ic" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-ampulheta"/></svg>
-        <strong>Hora de se aposentar?</strong>
-        <small>Por idade, tempo de contribuição, especial e híbrida.</small>
-      </button>
-      <button type="button" class="tile tile-vidro a-pensao revelar" data-momento="m-pensao"
+        <span class="item-txt"><strong>Aposentadoria</strong><small>Por idade, tempo de contribuição, especial, híbrida e da pessoa com deficiência</small></span>
+        <span class="item-seta" aria-hidden="true">→</span>
+      </button></li>
+      <li><button type="button" class="item" data-momento="m-pensao"
         data-busca="pensão pensao morte faleceu falecimento viúva viuva viúvo união estável uniao reclusão reclusao preso prisão">
-        <span class="tile-seta" aria-hidden="true">↗</span>
-        <svg class="tile-ic" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-familia"/></svg>
-        <strong>Perdeu alguém da família?</strong>
-        <small>Pensão por morte e auxílio-reclusão.</small>
-      </button>
-      <button type="button" class="tile tile-vidro a-mater revelar" data-momento="m-mater"
+        <span class="item-txt"><strong>Pensão por morte e auxílio-reclusão</strong><small>Para a família de quem era segurado do INSS</small></span>
+        <span class="item-seta" aria-hidden="true">→</span>
+      </button></li>
+      <li><button type="button" class="item" data-momento="m-mater"
         data-busca="salário-maternidade salario maternidade bebê bebe gravidez grávida gravida parto adoção adocao guarda mãe mae pai">
-        <span class="tile-seta" aria-hidden="true">↗</span>
-        <svg class="tile-ic" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-bebe"/></svg>
-        <strong>Bebê ou adoção?</strong>
-        <small>Salário-maternidade.</small>
-      </button>
-      <button type="button" class="tile tile-vidro a-revisao revelar" data-momento="m-revisao"
+        <span class="item-txt"><strong>Salário-maternidade</strong><small>Nascimento, adoção ou guarda para adoção</small></span>
+        <span class="item-seta" aria-hidden="true">→</span>
+      </button></li>
+      <li><button type="button" class="item" data-momento="m-revisao"
         data-busca="revisão revisao aposentado valor errado cnis planejamento planejar carta de concessão">
-        <span class="tile-seta" aria-hidden="true">↗</span>
-        <svg class="tile-ic" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-revisao"/></svg>
-        <strong>Já recebe ou quer se planejar?</strong>
-        <small>Revisão e planejamento previdenciário.</small>
-      </button>
-    </div>
+        <span class="item-txt"><strong>Revisão e planejamento</strong><small>Para quem já recebe ou ainda vai se aposentar</small></span>
+        <span class="item-seta" aria-hidden="true">→</span>
+      </button></li>
+      <li><button type="button" class="item" data-momento="m-negou"
+        data-busca="negou negado negada negativa indeferido indeferimento recurso justiça justica federal ação acao processo cortado cessado">
+        <span class="item-txt"><strong>Negativa ou corte do INSS</strong><small>Recurso administrativo e ação na Justiça Federal</small></span>
+        <span class="item-seta" aria-hidden="true">→</span>
+      </button></li>
+    </ol>
   </div>
 </section>
 
@@ -232,7 +211,7 @@
 
   <article class="momento-art" id="m-doenca" hidden>
     <p class="rotulo">Auxílio-doença, aposentadoria por invalidez e auxílio-acidente</p>
-    <h2>Uma doença ou acidente impede você de trabalhar?</h2>
+    <h2>Doença, invalidez ou acidente</h2>
     <div class="momento-grade">
       <div>
         <h3>Quem pode ter direito</h3>
@@ -255,7 +234,7 @@
 
   <article class="momento-art" id="m-apos" hidden>
     <p class="rotulo">Por idade, por tempo de contribuição, especial, híbrida e da pessoa com deficiência</p>
-    <h2>Chegou a hora de se aposentar?</h2>
+    <h2>Aposentadoria</h2>
     <div class="momento-grade">
       <div>
         <h3>Quem pode ter direito</h3>
@@ -278,7 +257,7 @@
 
   <article class="momento-art" id="m-roca" hidden>
     <p class="rotulo">Aposentadoria rural e outros benefícios do segurado especial</p>
-    <h2>Trabalha ou trabalhou na roça?</h2>
+    <h2>Trabalho rural e segurado especial</h2>
     <div class="momento-grade">
       <div>
         <h3>Quem pode ter direito</h3>
@@ -300,8 +279,8 @@
   </article>
 
   <article class="momento-art" id="m-bpc" hidden>
-    <p class="rotulo">BPC/LOAS, o benefício assistencial</p>
-    <h2>Pessoa idosa ou com deficiência, em família de baixa renda?</h2>
+    <p class="rotulo">Benefício assistencial</p>
+    <h2>BPC/LOAS</h2>
     <div class="momento-grade">
       <div>
         <h3>Quem pode ter direito</h3>
@@ -323,8 +302,8 @@
   </article>
 
   <article class="momento-art" id="m-pensao" hidden>
-    <p class="rotulo">Pensão por morte e auxílio-reclusão</p>
-    <h2>Perdeu alguém da família, ou um familiar foi preso?</h2>
+    <p class="rotulo">Para a família de quem era segurado do INSS</p>
+    <h2>Pensão por morte e auxílio-reclusão</h2>
     <div class="momento-grade">
       <div>
         <h3>Quem pode ter direito</h3>
@@ -346,8 +325,8 @@
   </article>
 
   <article class="momento-art" id="m-mater" hidden>
-    <p class="rotulo">Salário-maternidade</p>
-    <h2>Vai ter um bebê ou adotou uma criança?</h2>
+    <p class="rotulo">Nascimento, adoção ou guarda para adoção</p>
+    <h2>Salário-maternidade</h2>
     <div class="momento-grade">
       <div>
         <h3>Quem pode ter direito</h3>
@@ -368,8 +347,8 @@
   </article>
 
   <article class="momento-art" id="m-revisao" hidden>
-    <p class="rotulo">Revisão do benefício e planejamento previdenciário</p>
-    <h2>Já recebe benefício ou quer se planejar?</h2>
+    <p class="rotulo">Para quem já recebe ou ainda vai se aposentar</p>
+    <h2>Revisão e planejamento</h2>
     <div class="momento-grade">
       <div>
         <h3>Quem pode ter direito</h3>
@@ -390,7 +369,7 @@
 
   <article class="momento-art" id="m-negou" hidden>
     <p class="rotulo">Recurso administrativo e ação na Justiça Federal</p>
-    <h2>O INSS negou ou cortou o seu benefício?</h2>
+    <h2>Negativa ou corte do INSS</h2>
     <div class="momento-grade">
       <div>
         <h3>O que pode ser feito</h3>
@@ -412,45 +391,38 @@
 
   <div class="janela-acoes">
     <a class="btn btn-verde" href="https://wa.me/5582993278827?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20um%20benef%C3%ADcio%20do%20INSS." target="_blank" rel="noopener">
-      <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whats"/></svg> Falar sobre isso no WhatsApp
+      <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whats"/></svg> Falar com o escritório
     </a>
-    <button type="button" class="btn btn-linha" data-imprimir>
-      <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-imprimir"/></svg> Imprimir a lista
-    </button>
+    <button type="button" class="btn btn-contorno" data-imprimir>Imprimir a lista</button>
   </div>
 </dialog>
 
-<!-- COMO FUNCIONA -->
-<section class="secao" id="como-funciona" aria-labelledby="etapas-tit">
+<!-- COMO TRABALHAMOS -->
+<section class="secao secao-pedra" id="como-trabalhamos" aria-labelledby="etapas-tit">
   <div class="secao-in">
-    <div class="cab cab-claro">
-      <div>
-        <p class="rotulo">Como funciona</p>
-        <h2 id="etapas-tit">Do primeiro contato à decisão</h2>
-      </div>
-      <p>Quatro etapas, sempre com você sabendo em que pé está o seu pedido.</p>
-    </div>
+    <p class="rotulo">Como trabalhamos</p>
+    <h2 id="etapas-tit">Do primeiro contato à decisão</h2>
     <ol class="etapas">
-      <li class="revelar">
-        <span class="etapa-n">01</span>
+      <li>
+        <span class="etapa-n">1</span>
         <h3>Primeira conversa</h3>
         <p>Você conta a sua situação pelo WhatsApp, por telefone ou numa das unidades. Explicamos quais caminhos existem.</p>
         <p class="etapa-leve"><strong>O que ter em mãos:</strong> nada obrigatório. Se tiver, a carta do INSS ajuda.</p>
       </li>
-      <li class="revelar">
-        <span class="etapa-n">02</span>
+      <li>
+        <span class="etapa-n">2</span>
         <h3>Análise dos documentos</h3>
         <p>Conferimos o CNIS, as carteiras de trabalho, os laudos e as demais provas, e dizemos o que ainda falta reunir.</p>
         <p class="etapa-leve"><strong>O que ter em mãos:</strong> a lista de documentos da sua situação.</p>
       </li>
-      <li class="revelar">
-        <span class="etapa-n">03</span>
+      <li>
+        <span class="etapa-n">3</span>
         <h3>Pedido no INSS</h3>
         <p>Fazemos o requerimento e acompanhamos exigências, perícias e avaliações até a decisão.</p>
         <p class="etapa-leve"><strong>Você recebe:</strong> o número do pedido e avisos a cada novidade.</p>
       </li>
-      <li class="revelar">
-        <span class="etapa-n">04</span>
+      <li>
+        <span class="etapa-n">4</span>
         <h3>Recurso ou Justiça</h3>
         <p>Se o pedido for negado, avaliamos com você o recurso administrativo ou a ação na Justiça Federal.</p>
         <p class="etapa-leve"><strong>Sempre antes:</strong> explicamos os riscos e o que esperar de cada caminho.</p>
@@ -459,34 +431,54 @@
   </div>
 </section>
 
-<!-- O ESCRITÓRIO -->
-<section class="secao secao-creme" id="escritorio" aria-labelledby="escritorio-tit">
-  <div class="secao-in escritorio">
-    <div class="escritorio-texto revelar">
-      <p class="rotulo">Conheça o escritório antes de decidir</p>
-      <h2 id="escritorio-tit">Um escritório dedicado ao direito previdenciário</h2>
-      <p>O Ribeiro, Vilela & Ribeiro atende trabalhadores urbanos e rurais, pessoas com deficiência, famílias e aposentados que precisam de orientação diante do INSS, em Maceió e em União dos Palmares.</p>
-      <p>Nosso trabalho é tornar o processo compreensível: explicar o que a lei exige, organizar as provas e acompanhar cada etapa, no INSS e na Justiça Federal.</p>
-      <a class="link-seta" href="/seguranca">Como confirmar que você está falando com o escritório</a>
-    </div>
+<!-- ADVOGADOS (única seção escura do meio) -->
+<section class="escritorio" id="advogados" aria-labelledby="advogados-tit">
+  <div class="secao-in">
+    <h2 id="advogados-tit">Os advogados</h2>
+    <p class="escritorio-intro">Sócios do Ribeiro, Vilela &amp; Ribeiro, inscritos na OAB de Alagoas, com atuação em direito previdenciário nas unidades de Maceió e de União dos Palmares.</p>
     <div class="advogados">
-      <article class="advogado revelar">
-        <div class="advogado-retrato" aria-hidden="true"><span>TV</span></div>
-        <div class="advogado-dados">
-          <h3>Thiago Vilela</h3>
-          <p>Thiago Pontes de Miranda Carvalho Vilela</p>
-          <p class="oab">OAB/AL 22.792</p>
-        </div>
+      <article class="advogado">
+        <h3>Thiago Vilela</h3>
+        <p class="advogado-nome">Thiago Pontes de Miranda Carvalho Vilela</p>
+        <p class="oab">OAB/AL 22.792</p>
       </article>
-      <article class="advogado revelar">
-        <div class="advogado-retrato" aria-hidden="true"><span>GR</span></div>
-        <div class="advogado-dados">
-          <h3>Gleyson Ribeiro</h3>
-          <p>Gleyson Jorge Holanda Ribeiro</p>
-          <p class="oab">OAB/AL 6.556</p>
-        </div>
+      <article class="advogado">
+        <h3>Gleyson Ribeiro</h3>
+        <p class="advogado-nome">Gleyson Jorge Holanda Ribeiro</p>
+        <p class="oab">OAB/AL 6.556</p>
       </article>
     </div>
+    <div class="canais">
+      <div>
+        <h3>Canais oficiais</h3>
+        <p>O escritório fala com você só por estes canais e nunca pede pagamento para liberar benefício.</p>
+      </div>
+      <dl>
+        <div><dt>Telefone e WhatsApp</dt><dd><a href="tel:+5582993278827">(82) 99327-8827</a></dd></div>
+        <div><dt>Unidades</dt><dd>Maceió · União dos Palmares</dd></div>
+      </dl>
+      <a class="link link-claro" href="/seguranca">Como confirmar que é mesmo o escritório →</a>
+    </div>
+  </div>
+</section>
+
+<!-- UNIDADES -->
+<section class="secao" id="unidades" aria-labelledby="unidades-tit">
+  <div class="secao-in">
+    <h2 id="unidades-tit">Onde estamos</h2>
+    <div class="unidades">
+      <div class="unidade">
+        <h3>Maceió</h3>
+        <p class="unidade-end">Rua Sete de Setembro, nº 188<br>Centro · CEP 57020-700</p>
+        <a class="btn btn-contorno" href="/maceio">Como chegar</a>
+      </div>
+      <div class="unidade">
+        <h3>União dos Palmares</h3>
+        <p class="unidade-end">Rua Dr. Antônio Arecipo, nº 227<br>Empresarial Dona Dora, Sala 02 · Centro</p>
+        <a class="btn btn-contorno" href="/uniao-dos-palmares">Como chegar</a>
+      </div>
+    </div>
+    <p class="unidades-nota">Atendimento com horário marcado. Combine pelo WhatsApp ou pelo telefone (82) 99327-8827.</p>
   </div>
 </section>
 
@@ -494,17 +486,13 @@
 <section class="secao" id="duvidas" aria-labelledby="duvidas-tit">
   <div class="secao-in duvidas-grade">
     <div class="duvidas-cab">
-      <p class="rotulo">Dúvidas frequentes</p>
-      <h2 id="duvidas-tit">Perguntas que ouvimos todos os dias</h2>
-      <p>Não achou a sua? Pergunte pelo WhatsApp oficial do escritório.</p>
-      <a class="btn btn-verde" href="https://wa.me/5582993278827?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20um%20benef%C3%ADcio%20do%20INSS." target="_blank" rel="noopener">
-        <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whats"/></svg> Fazer uma pergunta
-      </a>
+      <h2 id="duvidas-tit">Dúvidas frequentes</h2>
+      <p>Não achou a sua dúvida? Ligue para <a href="tel:+5582993278827">(82) 99327-8827</a>.</p>
     </div>
     <div class="duvidas">
       <details data-busca="primeiro contato consulta conversa">
         <summary>O primeiro contato já é uma consulta?</summary>
-        <p>No primeiro contato, entendemos a sua situação e explicamos os caminhos possíveis. Se fizer sentido seguir, combinamos os próximos passos com você.</p>
+        <p>A primeira conversa serve para entender a sua situação e explicar os caminhos possíveis. Qualquer valor, de consulta ou de honorários, é informado antes e por escrito.</p>
       </details>
       <details data-busca="honorários honorarios valor pagar pagamento contrato quanto custa">
         <summary>Como funcionam os honorários?</summary>
@@ -518,13 +506,9 @@
         <summary>O INSS negou meu pedido. O que eu faço?</summary>
         <p>A negativa não encerra o assunto. Cabe recurso administrativo ou ação na Justiça Federal, conforme o caso. O recurso tem prazo, por isso procure orientação logo que a carta de indeferimento chegar.</p>
       </details>
-      <details data-busca="distância distancia whatsapp telefone ir ao escritório sem ir online">
+      <details data-busca="distância distancia whatsapp telefone ir ao escritório sem ir online familiar acompanhante">
         <summary>Posso ser atendido sem ir ao escritório?</summary>
-        <p>A primeira conversa pode ser pelo WhatsApp ou por telefone. Os passos seguintes, como a entrega de documentos e a assinatura, são combinados com você.</p>
-      </details>
-      <details data-busca="familiar acompanhante filho filha levar alguém">
-        <summary>Posso ir acompanhado de um familiar?</summary>
-        <p>Pode, e muitas vezes ajuda. É comum que um filho, filha ou outra pessoa de confiança acompanhe a conversa.</p>
+        <p>A primeira conversa pode ser pelo WhatsApp ou por telefone. Os passos seguintes, como a entrega de documentos e a assinatura, são combinados com você. Se vier ao escritório, pode vir acompanhado de um familiar.</p>
       </details>
       <details data-busca="cnis cadastro contribuições vínculos">
         <summary>O que é o CNIS e por que ele importa?</summary>
@@ -532,49 +516,22 @@
       </details>
       <details data-busca="governo inss órgão orgao oficial golpe">
         <summary>O escritório é do governo ou do INSS?</summary>
-        <p>Não. O Ribeiro, Vilela & Ribeiro é um escritório de advocacia particular, formado por advogados inscritos na OAB de Alagoas. Não somos órgão do governo e não temos ligação com o INSS. <a href="/seguranca">Veja como confirmar que é mesmo o escritório</a>.</p>
+        <p>Não. O Ribeiro, Vilela &amp; Ribeiro é um escritório de advocacia particular, formado por advogados inscritos na OAB de Alagoas. Não é órgão do governo e não tem ligação com o INSS. <a href="/seguranca">Veja como confirmar que é mesmo o escritório</a>.</p>
       </details>
     </div>
   </div>
 </section>
 
-<!-- UNIDADES -->
-<section class="secao secao-creme" id="unidades" aria-labelledby="unidades-tit">
-  <div class="secao-in">
-    <div class="cab cab-claro">
-      <div>
-        <p class="rotulo">Unidades</p>
-        <h2 id="unidades-tit">Onde estamos</h2>
-      </div>
-      <p>Combine o seu horário pelo WhatsApp antes de vir, para ser atendido sem espera.</p>
-    </div>
-    <div class="unidades">
-      <a class="unidade revelar" href="/maceio">
-        <span class="unidade-ic"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-local"/></svg></span>
-        <h3>Maceió</h3>
-        <p>Rua Sete de Setembro, nº 188<br>Centro · CEP 57020-700</p>
-        <span class="link-seta">Endereço, mapa e como chegar</span>
-      </a>
-      <a class="unidade revelar" href="/uniao-dos-palmares">
-        <span class="unidade-ic"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-local"/></svg></span>
-        <h3>União dos Palmares</h3>
-        <p>Rua Dr. Antônio Arecipo, nº 227<br>Empresarial Dona Dora, Sala 02 · Centro</p>
-        <span class="link-seta">Endereço, mapa e como chegar</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- CHAMADA FINAL -->
-<section class="final" aria-labelledby="final-tit">
-  <div class="final-card revelar">
-    <h2 id="final-tit">Quer entender o <em>seu caso?</em></h2>
-    <p>Conte a sua situação com calma. Respondemos pelo WhatsApp oficial do escritório.</p>
-    <a class="btn btn-ouro btn-grande" href="https://wa.me/5582993278827?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20um%20benef%C3%ADcio%20do%20INSS." target="_blank" rel="noopener">
-      <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whats"/></svg>
-      Falar com o escritório
+<!-- FECHO -->
+<section class="fecho" aria-labelledby="fecho-tit">
+  <div class="fecho-in">
+    <h2 id="fecho-tit">Converse com o escritório</h2>
+    <p class="fecho-tel"><a href="tel:+5582993278827">(82) 99327-8827</a></p>
+    <a class="btn btn-verde" href="https://wa.me/5582993278827?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20um%20benef%C3%ADcio%20do%20INSS." target="_blank" rel="noopener">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whats"/></svg> Conversar pelo WhatsApp
     </a>
-    <p class="final-nota">(82) 99327-8827 · ribeirovilelaribeiro.adv@gmail.com</p>
+    <p class="fecho-end">Rua Sete de Setembro, 188, Centro, Maceió · Rua Dr. Antônio Arecipo, 227, Centro, União dos Palmares</p>
+    <p class="fecho-cliente">Já é cliente? <button type="button" class="link" data-abrir="cliente">Acesse a área do cliente</button></p>
   </div>
 </section>
 </main>
@@ -582,8 +539,7 @@
 <footer class="rodape" id="rodape">
   <div class="rodape-in">
     <div class="rodape-marca">
-      <img src="/img/monograma.png" alt="" width="400" height="229">
-      <p class="rodape-nome">Ribeiro, Vilela & Ribeiro<br><span>Advogados Associados</span></p>
+      <img src="/img/logo-chapado-ouro.png" alt="Ribeiro, Vilela & Ribeiro Advogados Associados" width="1400" height="169">
       <p>Advocacia previdenciária em Maceió e União dos Palmares, Alagoas.</p>
     </div>
     <div>
@@ -594,8 +550,8 @@
     <div>
       <h2 class="rodape-tit">Canais oficiais</h2>
       <p><a href="https://wa.me/5582993278827?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o%20sobre%20um%20benef%C3%ADcio%20do%20INSS." target="_blank" rel="noopener">WhatsApp e telefone (82) 99327-8827</a></p>
-      <p><a href="mailto:ribeirovilelaribeiro.adv@gmail.com">ribeirovilelaribeiro.adv<wbr>@gmail.com</a></p>
       <p><a href="/maceio">Unidade Maceió</a> · <a href="/uniao-dos-palmares">Unidade União dos Palmares</a></p>
+      <p><button type="button" class="link-rodape" data-abrir="cliente">Área do cliente</button></p>
     </div>
     <div>
       <h2 class="rodape-tit">Transparência</h2>
@@ -622,15 +578,12 @@
   <p>Escolha uma opção. O WhatsApp oficial do escritório abre com a mensagem pronta.</p>
   <div class="janela-opcoes">
     <a class="opcao" href="https://wa.me/5582993278827?text=Ol%C3%A1!%20Sou%20cliente%20do%20escrit%C3%B3rio%20e%20quero%20enviar%20um%20documento." target="_blank" rel="noopener">
-      <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-documento"/></svg>
       <span><strong>Enviar um documento</strong>Laudo, carta do INSS, comprovante</span>
     </a>
     <a class="opcao" href="https://wa.me/5582993278827?text=Ol%C3%A1!%20Sou%20cliente%20do%20escrit%C3%B3rio%20e%20quero%20saber%20como%20est%C3%A1%20o%20meu%20pedido." target="_blank" rel="noopener">
-      <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-relogio"/></svg>
       <span><strong>Saber como está meu pedido</strong>Andamento no INSS ou na Justiça</span>
     </a>
     <a class="opcao" href="https://wa.me/5582993278827?text=Ol%C3%A1!%20Sou%20cliente%20do%20escrit%C3%B3rio%20e%20quero%20atualizar%20meu%20telefone%20ou%20endere%C3%A7o." target="_blank" rel="noopener">
-      <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#i-telefone"/></svg>
       <span><strong>Atualizar telefone ou endereço</strong>Para não perder nenhum aviso</span>
     </a>
   </div>
@@ -645,29 +598,13 @@
   <p>O link leva a <strong data-saida-dominio>gov.br</strong>, que é do governo federal e não do escritório. Lá você entra com a sua própria senha do gov.br, que não deve ser passada a ninguém.</p>
   <div class="janela-acoes">
     <a class="btn btn-verde" data-saida-ir href="#" target="_blank" rel="noopener">Continuar para o site oficial</a>
-    <form method="dialog"><button class="btn btn-linha">Ficar aqui</button></form>
+    <form method="dialog"><button class="btn btn-contorno">Ficar aqui</button></form>
   </div>
 </dialog>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <symbol id="i-whats" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.86 9.86 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29Z"/></symbol>
-    <symbol id="i-som" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></g></symbol>
-    <symbol id="i-busca" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></g></symbol>
-    <symbol id="i-local" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
-    <symbol id="i-escudo" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5.5c0 4.4 3 8.2 7 9.5 4-1.3 7-5.1 7-9.5V6l-7-3Z"/><path d="m9 12 2.2 2.2L15.5 10"/></g></symbol>
-    <symbol id="i-documento" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6.5A1.5 1.5 0 0 0 5 4.5v15A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V8l-5-5Z"/><path d="M14 3v5h5M8.5 13h7M8.5 16.5h5"/></g></symbol>
-    <symbol id="i-relogio" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></g></symbol>
-    <symbol id="i-telefone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></g></symbol>
-    <symbol id="i-saude" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M12 8v8M8 12h8"/></g></symbol>
-    <symbol id="i-ampulheta" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 21h12M7 3c0 5 10 5 10 9s-10 4-10 9M17 3c0 5-10 5-10 9s10 4 10 9"/></g></symbol>
-    <symbol id="i-campo" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V9M12 13c-3 0-5-2-5-5 3 0 5 2 5 5ZM12 11c3 0 5-2 5-5-3 0-5 2-5 5ZM12 17c-3 0-5-2-5-5 3 0 5 2 5 5ZM12 15c3 0 5-2 5-5-3 0-5 2-5 5Z"/><path d="M4 21h16"/></g></symbol>
-    <symbol id="i-maos" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7.5c-1.3-2.4-5-2-5 .9 0 2.4 5 5.6 5 5.6s5-3.2 5-5.6c0-2.9-3.7-3.3-5-.9Z"/><path d="M2.5 15.5l3.5-1c1-.3 2 0 2.7.6l1.3 1.1h4a1.5 1.5 0 0 1 0 3H9.5M14 19.2l5.3-2.4a1.5 1.5 0 0 1 1.4 2.6L15 22.3c-.8.4-1.7.5-2.6.3L6 21"/></g></symbol>
-    <symbol id="i-familia" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="6.5" r="2.5"/><circle cx="16.5" cy="7.5" r="2"/><path d="M3.5 20v-3.5A4.5 4.5 0 0 1 8 12a4.5 4.5 0 0 1 4.5 4.5V20M13.5 13.2a3.5 3.5 0 0 1 6.5 1.8V20"/></g></symbol>
-    <symbol id="i-bebe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M9 11h.01M15 11h.01M9.5 15c1.4 1.2 3.6 1.2 5 0M12 3.5c-1.5 1-1.5 2.5 0 3"/></g></symbol>
-    <symbol id="i-revisao" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.3-5.6M20 4v4h-4"/><path d="M9 12l2 2 4-4"/></g></symbol>
-    <symbol id="i-balanca" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10M5 7h14M12 5l-7 2M12 5l7 2"/><path d="M5 7l-3 7a3.5 3.5 0 0 0 6 0L5 7ZM19 7l-3 7a3.5 3.5 0 0 0 6 0l-3-7Z"/></g></symbol>
-    <symbol id="i-imprimir" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8V3h10v5M7 17H4.5A1.5 1.5 0 0 1 3 15.5v-6A1.5 1.5 0 0 1 4.5 8h15A1.5 1.5 0 0 1 21 9.5v6a1.5 1.5 0 0 1-1.5 1.5H17"/><path d="M7 13h10v8H7z"/></g></symbol>
   </defs>
 </svg>
 

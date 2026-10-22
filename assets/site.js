@@ -18,8 +18,28 @@
     menu.classList.toggle("aberto", abrir);
     botaoMenu.setAttribute("aria-expanded", String(abrir));
   });
-  menu.querySelectorAll("a, button").forEach(function (el) { el.addEventListener("click", fecharMenu); });
+  menu.querySelectorAll("a, [data-abrir]").forEach(function (el) { el.addEventListener("click", fecharMenu); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") fecharMenu(); });
+
+  // ---------- painel de acessibilidade ----------
+  const botaoAcess = document.querySelector("[data-acess-btn]");
+  const painelAcess = document.getElementById("acess-painel");
+  function fecharAcess() { painelAcess.hidden = true; botaoAcess.setAttribute("aria-expanded", "false"); }
+  botaoAcess.addEventListener("click", function (e) {
+    e.stopPropagation();
+    const abrir = painelAcess.hidden;
+    painelAcess.hidden = !abrir;
+    botaoAcess.setAttribute("aria-expanded", String(abrir));
+  });
+  painelAcess.addEventListener("click", function (e) { e.stopPropagation(); });
+  document.addEventListener("click", fecharAcess);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") fecharAcess(); });
+  document.querySelector("[data-libras]").addEventListener("click", function () {
+    const vw = document.querySelector("#vlibras-access-wrapper [role='button'], #vlibras-access-wrapper button, #vlibras-access-wrapper img, #vlibras-access-wrapper")
+      || document.querySelector("[vw-access-button]");
+    if (vw) vw.click();
+    fecharAcess();
+  });
 
   // ---------- tamanho do texto ----------
   const ESCALAS = [0.9, 1, 1.15, 1.3];
@@ -125,7 +145,7 @@
   // ---------- busca "Como podemos ajudar?" ----------
   const campo = document.getElementById("busca");
   if (campo) {
-    const blocos = Array.from(document.querySelectorAll(".tile"));
+    const blocos = Array.from(document.querySelectorAll("button[data-momento]"));
     const perguntas = Array.from(document.querySelectorAll("#duvidas details"));
     const resultado = document.querySelector("[data-busca-resultado]");
     const normal = function (s) { return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); };
@@ -184,17 +204,6 @@
     });
   });
   window.addEventListener("afterprint", function () { document.body.classList.remove("imprimindo"); });
-
-  // ---------- entrada suave ao rolar ----------
-  const revelar = document.querySelectorAll(".revelar");
-  if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    const obs = new IntersectionObserver(function (entradas) {
-      entradas.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("visivel"); obs.unobserve(en.target); } });
-    }, { rootMargin: "0px 0px -8% 0px" });
-    revelar.forEach(function (el) { obs.observe(el); });
-  } else {
-    revelar.forEach(function (el) { el.classList.add("visivel"); });
-  }
 
   // ---------- Libras (VLibras, do governo federal) ----------
   if (window.VLibras) {
