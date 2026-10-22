@@ -3,6 +3,12 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/",
+      "has": [{ "type": "host", "value": "ribeirovilelaribeiro.vercel.app" }],
+      "destination": "https://ribeirovilelaribeiro.com.br/",
+      "permanent": true
+    },
+    {
       "source": "/:caminho*",
       "has": [{ "type": "host", "value": "ribeirovilelaribeiro.vercel.app" }],
       "destination": "https://ribeirovilelaribeiro.com.br/:caminho*",
