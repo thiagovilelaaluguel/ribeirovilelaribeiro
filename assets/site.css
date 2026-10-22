@@ -1,12 +1,15 @@
 /* Ribeiro, Vilela & Ribeiro · direção "Timbre": o papel timbrado do escritório na tela.
    Papel claro, tinta verde-noite, esmeralda nos botões e links, filete de 1 px como único ornamento.
    Proibido (auditoria de 22/10/2026): vidro, pílula, degradê, sombra decorativa, animação de movimento,
-   mosaico, selos, setas ↗, ícones genéricos, itálico colorido, foto de banco, dourado como texto em fundo claro. */
+   mosaico, selos, setas ↗, ícones genéricos, itálico colorido, foto de banco, dourado como texto em fundo claro.
+   22/10/2026: ponte com o Instagram (opção leve): abertura e advogados no verde dos posts, liso; parte do título
+   da abertura em dourado; filete dourado acima de cada rótulo. */
 :root {
   --escala: 1;
   --papel: #FAF7F0;
   --pedra: #F0EADC;
   --noite: #052319;
+  --verde: #0D4834;
   --esmeralda: #136045;
   --texto-2: #3B4F46;
   --filete: #D8CDB6;
@@ -41,6 +44,7 @@ dl, dd { margin: 0; }
 
 /* ---------- peças de base ---------- */
 .rotulo { margin-bottom: 1.1rem; font-size: .9375rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--esmeralda); }
+.rotulo::before { content: ""; display: block; width: 3rem; height: 1px; background: var(--ouro); margin-bottom: .9rem; }
 .rotulo-claro { color: var(--ouro-claro); }
 .filete-ouro { display: block; width: 3rem; height: 1px; background: var(--ouro); margin: 2rem 0; }
 
@@ -90,10 +94,11 @@ dl, dd { margin: 0; }
 #vlibras-access-wrapper, [vw] [vw-access-button] { transform: translateX(-300vw) !important; visibility: hidden !important; }
 
 /* ---------- abertura ---------- */
-.hero { padding: 6rem var(--margem) var(--respiro); }
+.hero { padding: 6rem var(--margem) var(--respiro); background: var(--verde); }
 .hero-in { max-width: var(--larg); margin: 0 auto; display: grid; grid-template-columns: 7fr 5fr; gap: 5rem; align-items: start; }
-.hero h1 { max-width: 12em; }
-.hero-lead { max-width: 30em; font-size: 1.4375rem; line-height: 1.5; color: var(--texto-2); }
+.hero h1 { max-width: 12em; color: var(--papel); }
+.hero h1 em { font-style: normal; color: var(--ouro-claro); } /* a parte do título que os posts destacam em dourado */
+.hero-lead { max-width: 30em; font-size: 1.4375rem; line-height: 1.5; color: rgba(250, 247, 240, .85); }
 .hero-acoes { margin-top: 2.5rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1.75rem 2.25rem; }
 /* uma única foto, em tom único, sem texto por cima */
 .hero-foto { margin: 0; }
@@ -151,7 +156,7 @@ dl, dd { margin: 0; }
 .etapas .etapa-leve strong { color: var(--noite); }
 
 /* escritório: a única seção escura do meio */
-.escritorio { background: var(--noite); color: var(--papel); padding: 10rem var(--margem); }
+.escritorio { background: var(--verde); color: var(--papel); padding: 10rem var(--margem); }
 .escritorio h2 { color: var(--papel); }
 .escritorio-intro { margin-top: 1.5rem; max-width: 36em; font-size: 1.25rem; color: rgba(250, 247, 240, .85); }
 .advogados { margin-top: 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
