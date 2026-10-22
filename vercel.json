@@ -1,4 +1,12 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:caminho*",
+      "has": [{ "type": "host", "value": "ribeirovilelaribeiro.vercel.app" }],
+      "destination": "https://ribeirovilelaribeiro.com.br/:caminho*",
+      "permanent": true
+    }
+  ]
 }
