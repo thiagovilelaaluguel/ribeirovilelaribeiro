@@ -7,6 +7,7 @@
 <meta name="description" content="Escritório de advocacia previdenciária em Maceió e União dos Palmares (AL). Aposentadorias, BPC/LOAS, auxílio-doença, pensão por morte, salário-maternidade, revisão e recursos contra negativas do INSS.">
 <meta name="theme-color" content="#052319">
 <link rel="canonical" href="https://ribeirovilelaribeiro.com.br/">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/img/favicon.png">
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <meta property="og:type" content="website">
@@ -37,36 +38,175 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "Ribeiro, Vilela & Ribeiro Advogados Associados",
-  "url": "https://ribeirovilelaribeiro.com.br/",
-  "image": "https://ribeirovilelaribeiro.com.br/img/og.jpg",
-  "description": "Advocacia previdenciária: aposentadorias, benefícios por incapacidade, BPC/LOAS, pensão por morte, salário-maternidade, revisão e planejamento previdenciário.",
-  "telephone": "+55 82 99327-8827",
-  "areaServed": [
-    "Maceió",
-    "União dos Palmares",
-    "Alagoas"
-  ],
-  "sameAs": [
-    "https://www.instagram.com/ribeirovilelaribeiro.adv/"
-  ],
-  "address": [
+  "@graph": [
     {
-      "@type": "PostalAddress",
-      "streetAddress": "Rua Sete de Setembro, 188, Centro",
-      "addressLocality": "Maceió",
-      "addressRegion": "AL",
-      "postalCode": "57020-700",
-      "addressCountry": "BR"
+      "@type": "LegalService",
+      "@id": "https://ribeirovilelaribeiro.com.br/#escritorio",
+      "name": "Ribeiro, Vilela & Ribeiro Advogados Associados",
+      "url": "https://ribeirovilelaribeiro.com.br/",
+      "logo": "https://ribeirovilelaribeiro.com.br/img/logo-verde.png",
+      "image": "https://ribeirovilelaribeiro.com.br/img/og.jpg",
+      "description": "Advocacia previdenciária: aposentadorias, benefícios por incapacidade, BPC/LOAS, pensão por morte, salário-maternidade, revisão e planejamento previdenciário.",
+      "telephone": "+55 82 99327-8827",
+      "areaServed": [
+        "Maceió",
+        "União dos Palmares",
+        "Alagoas"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/ribeirovilelaribeiro.adv/"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Sete de Setembro, 188, Centro",
+        "addressLocality": "Maceió",
+        "addressRegion": "AL",
+        "postalCode": "57020-700",
+        "addressCountry": "BR"
+      },
+      "employee": [
+        {
+          "@type": "Person",
+          "name": "Thiago Pontes de Miranda Carvalho Vilela",
+          "jobTitle": "Advogado, OAB/AL 22.792"
+        },
+        {
+          "@type": "Person",
+          "name": "Gleyson Jorge Holanda Ribeiro",
+          "jobTitle": "Advogado, OAB/AL 6.556"
+        }
+      ],
+      "department": [
+        {
+          "@id": "https://ribeirovilelaribeiro.com.br/maceio#unidade"
+        },
+        {
+          "@id": "https://ribeirovilelaribeiro.com.br/uniao-dos-palmares#unidade"
+        }
+      ]
     },
     {
-      "@type": "PostalAddress",
-      "streetAddress": "Rua Dr. Antônio Arecipo, 227, Empresarial Dona Dora, Sala 02, Centro",
-      "addressLocality": "União dos Palmares",
-      "addressRegion": "AL",
-      "postalCode": "57800-000",
-      "addressCountry": "BR"
+      "@type": "LegalService",
+      "@id": "https://ribeirovilelaribeiro.com.br/maceio#unidade",
+      "name": "Ribeiro, Vilela & Ribeiro Advogados Associados · Maceió",
+      "url": "https://ribeirovilelaribeiro.com.br/maceio",
+      "image": "https://ribeirovilelaribeiro.com.br/img/og.jpg",
+      "telephone": "+55 82 99327-8827",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Sete de Setembro, 188, Centro",
+        "addressLocality": "Maceió",
+        "addressRegion": "AL",
+        "postalCode": "57020-700",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday"
+          ],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      ]
+    },
+    {
+      "@type": "LegalService",
+      "@id": "https://ribeirovilelaribeiro.com.br/uniao-dos-palmares#unidade",
+      "name": "Ribeiro, Vilela & Ribeiro Advogados Associados · União dos Palmares",
+      "url": "https://ribeirovilelaribeiro.com.br/uniao-dos-palmares",
+      "image": "https://ribeirovilelaribeiro.com.br/img/og.jpg",
+      "telephone": "+55 82 99327-8827",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Dr. Antônio Arecipo, 227, Empresarial Dona Dora, Sala 02, Centro",
+        "addressLocality": "União dos Palmares",
+        "addressRegion": "AL",
+        "postalCode": "57800-000",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "13:00"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O primeiro contato já é uma consulta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A primeira conversa serve para entender a sua situação e explicar os caminhos possíveis. Os honorários só entram na conversa se você decidir seguir, e são combinados antes, por escrito."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como funcionam os honorários?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Os honorários são explicados e combinados por escrito, em contrato, antes de qualquer contratação. Nada é cobrado sem que você saiba antes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Preciso de advogado para pedir um benefício no INSS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não é obrigatório. O pedido pode ser feito pelo Meu INSS ou pelo telefone 135, e o INSS não cobra para receber o pedido. O acompanhamento de um advogado ajuda a escolher o benefício certo, reunir as provas antes e evitar negativa por falta de documento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O INSS negou meu pedido. O que eu faço?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A negativa não encerra o assunto. Cabe recurso administrativo ou ação na Justiça Federal, conforme o caso. O recurso tem prazo, por isso procure orientação logo que a carta de indeferimento chegar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso ser atendido sem ir ao escritório?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A primeira conversa pode ser pelo WhatsApp ou por telefone. Os passos seguintes, como a entrega de documentos e a assinatura, são combinados com você. Se vier ao escritório, pode vir acompanhado de um familiar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que é o CNIS e por que ele importa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "É o cadastro do INSS com os seus vínculos de trabalho e contribuições. Vínculos faltando ou errados diminuem o tempo de contribuição e podem mudar o valor do benefício. Conferir e corrigir esse cadastro costuma ser o primeiro passo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O escritório é do governo ou do INSS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. O Ribeiro, Vilela & Ribeiro é um escritório de advocacia particular, formado por advogados inscritos na OAB de Alagoas. Não é órgão do governo e não tem ligação com o INSS. Veja como confirmar que é mesmo o escritório ."
+      }
     }
   ]
 }
@@ -83,7 +223,10 @@
 <header class="topo">
   <div class="topo-in">
     <a class="marca" href="/" aria-label="Ribeiro, Vilela & Ribeiro, página inicial">
-      <img src="/img/logo-cabecalho-ouro.png" alt="Ribeiro, Vilela & Ribeiro Advogados Associados" width="1399" height="168">
+      <picture>
+        <source srcset="/img/logo-cabecalho-ouro-720.webp" type="image/webp">
+        <img src="/img/logo-cabecalho-ouro-720.png" alt="Ribeiro, Vilela & Ribeiro Advogados Associados" width="720" height="86">
+      </picture>
     </a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
     <div class="menu" id="menu">
@@ -133,7 +276,10 @@
       </div>
     </div>
     <figure class="hero-foto">
-      <img src="/img/fotos/rural-pb.jpg" alt="Trabalhador rural de chapéu de palha" width="1080" height="1350">
+      <picture>
+        <source srcset="/img/fotos/rural-pb-720.webp 720w, /img/fotos/rural-pb-1080.webp 1080w" sizes="(max-width: 1024px) 100vw, 40vw" type="image/webp">
+        <img src="/img/fotos/rural-pb-1080.jpg" srcset="/img/fotos/rural-pb-720.jpg 720w, /img/fotos/rural-pb-1080.jpg 1080w" sizes="(max-width: 1024px) 100vw, 40vw" alt="Trabalhador rural de chapéu de palha" width="1080" height="1350" loading="lazy">
+      </picture>
     </figure>
   </div>
 </section>
@@ -147,6 +293,14 @@
     <div><dt>Telefone e WhatsApp</dt><dd class="ficha-tel"><a href="tel:+5582993278827">(82) 99327-8827</a></dd></div>
   </dl>
 </section>
+
+<!-- no celular, a foto vem depois da ficha, para o telefone e a OAB aparecerem logo (auditoria de 28/10/2026) -->
+<figure class="foto-celular" aria-hidden="true">
+  <picture>
+    <source srcset="/img/fotos/rural-pb-720.webp" type="image/webp">
+    <img src="/img/fotos/rural-pb-720.jpg" alt="" width="720" height="900" loading="lazy">
+  </picture>
+</figure>
 
 <!-- BENEFÍCIOS -->
 <section class="secao" id="beneficios" aria-labelledby="beneficios-tit">
@@ -169,46 +323,46 @@
     </div>
 
     <ol class="indice">
-      <li><button type="button" class="item" data-momento="m-roca"
+      <li><a class="item" href="/beneficios/trabalhador-rural" data-momento="m-roca"
         data-busca="roça roca rural campo lavrador agricultor segurado especial sindicato pescador aposentadoria rural">
         <span class="item-txt"><strong>Trabalho rural e segurado especial</strong><small>Aposentadoria rural e direitos de quem vive do campo</small></span>
         <span class="item-seta" aria-hidden="true">→</span>
-      </button></li>
-      <li><button type="button" class="item" data-momento="m-doenca"
+      </a></li>
+      <li><a class="item" href="/beneficios/auxilio-doenca-e-invalidez" data-momento="m-doenca"
         data-busca="doença doente acidente incapacidade auxílio-doença auxilio doenca invalidez auxílio-acidente perícia pericia laudo trabalhar">
         <span class="item-txt"><strong>Doença, invalidez ou acidente</strong><small>Auxílio-doença, aposentadoria por invalidez e auxílio-acidente</small></span>
         <span class="item-seta" aria-hidden="true">→</span>
-      </button></li>
-      <li><button type="button" class="item" data-momento="m-bpc"
+      </a></li>
+      <li><a class="item" href="/beneficios/bpc-loas" data-momento="m-bpc"
         data-busca="bpc loas idoso idosa deficiência deficiencia baixa renda cadúnico cadunico assistencial">
         <span class="item-txt"><strong>BPC/LOAS</strong><small>Pessoa idosa ou com deficiência, de família de baixa renda</small></span>
         <span class="item-seta" aria-hidden="true">→</span>
-      </button></li>
-      <li><button type="button" class="item" data-momento="m-apos"
+      </a></li>
+      <li><a class="item" href="/beneficios/aposentadoria" data-momento="m-apos"
         data-busca="idade aposentar aposentadoria tempo contribuição contribuicao especial insalubre perigosa híbrida hibrida deficiência transição">
         <span class="item-txt"><strong>Aposentadoria</strong><small>Por idade, tempo de contribuição, especial, híbrida e da pessoa com deficiência</small></span>
         <span class="item-seta" aria-hidden="true">→</span>
-      </button></li>
-      <li><button type="button" class="item" data-momento="m-pensao"
+      </a></li>
+      <li><a class="item" href="/beneficios/pensao-por-morte" data-momento="m-pensao"
         data-busca="pensão pensao morte faleceu falecimento viúva viuva viúvo união estável uniao reclusão reclusao preso prisão">
         <span class="item-txt"><strong>Pensão por morte e auxílio-reclusão</strong><small>Para a família de quem era segurado do INSS</small></span>
         <span class="item-seta" aria-hidden="true">→</span>
-      </button></li>
-      <li><button type="button" class="item" data-momento="m-mater"
+      </a></li>
+      <li><a class="item" href="/beneficios/salario-maternidade" data-momento="m-mater"
         data-busca="salário-maternidade salario maternidade bebê bebe gravidez grávida gravida parto adoção adocao guarda mãe mae pai">
         <span class="item-txt"><strong>Salário-maternidade</strong><small>Nascimento, adoção ou guarda para adoção</small></span>
         <span class="item-seta" aria-hidden="true">→</span>
-      </button></li>
-      <li><button type="button" class="item" data-momento="m-revisao"
+      </a></li>
+      <li><a class="item" href="/beneficios/revisao-e-planejamento" data-momento="m-revisao"
         data-busca="revisão revisao aposentado valor errado cnis planejamento planejar carta de concessão">
         <span class="item-txt"><strong>Revisão e planejamento</strong><small>Para quem já recebe ou ainda vai se aposentar</small></span>
         <span class="item-seta" aria-hidden="true">→</span>
-      </button></li>
-      <li><button type="button" class="item" data-momento="m-negou"
+      </a></li>
+      <li><a class="item" href="/beneficios/negativa-do-inss" data-momento="m-negou"
         data-busca="negou negado negada negativa indeferido indeferimento recurso justiça justica federal ação acao processo cortado cessado">
         <span class="item-txt"><strong>Negativa ou corte do INSS</strong><small>Recurso administrativo e ação na Justiça Federal</small></span>
         <span class="item-seta" aria-hidden="true">→</span>
-      </button></li>
+      </a></li>
     </ol>
   </div>
 </section>
@@ -216,52 +370,6 @@
 <!-- DETALHE DE CADA SITUAÇÃO (abre por cima da página) -->
 <dialog class="janela janela-momento" id="janela-momento" aria-labelledby="momento-tit">
   <form method="dialog" class="janela-fechar"><button aria-label="Fechar">×</button></form>
-
-  <article class="momento-art" id="m-doenca" hidden>
-    <p class="rotulo">Auxílio-doença, aposentadoria por invalidez e auxílio-acidente</p>
-    <h2>Doença, invalidez ou acidente</h2>
-    <div class="momento-grade">
-      <div>
-        <h3>Quem pode ter direito</h3>
-        <p>Quem é segurado do INSS, ou seja, contribui ou contribuiu há pouco tempo, e ficou sem condições de trabalhar por doença ou acidente. Quem ficou com sequela de acidente que reduz a capacidade de trabalho pode ter direito ao auxílio-acidente.</p>
-        <h3>Próximo passo</h3>
-        <p>O INSS marca uma perícia médica. Ajudamos a organizar a documentação médica antes dela, porque é o que o perito vai analisar.</p>
-      </div>
-      <div>
-        <h3>Documentos para separar</h3>
-        <ul class="lista-docs">
-          <li>Documento com foto e CPF</li>
-          <li>Laudos e atestados médicos, de preferência com o CID da doença</li>
-          <li>Exames, receitas e relatórios de internação</li>
-          <li>Carteira de trabalho ou carnês de contribuição</li>
-          <li>Carta do INSS, se o pedido já tiver sido feito</li>
-        </ul>
-      </div>
-    </div>
-  </article>
-
-  <article class="momento-art" id="m-apos" hidden>
-    <p class="rotulo">Por idade, por tempo de contribuição, especial, híbrida e da pessoa com deficiência</p>
-    <h2>Aposentadoria</h2>
-    <div class="momento-grade">
-      <div>
-        <h3>Quem pode ter direito</h3>
-        <p>Quem atinge a idade mínima e o tempo de contribuição definidos em lei, ou se encaixa numa das regras de transição. Quem trabalhou exposto a agentes nocivos à saúde, ou tem deficiência, pode ter regras próprias.</p>
-        <h3>Próximo passo</h3>
-        <p>Analisamos o seu CNIS, o cadastro de contribuições do INSS, para conferir se está completo e descobrir qual regra é a melhor para você.</p>
-      </div>
-      <div>
-        <h3>Documentos para separar</h3>
-        <ul class="lista-docs">
-          <li>Documento com foto e CPF</li>
-          <li>Todas as carteiras de trabalho, inclusive as antigas</li>
-          <li>Carnês e comprovantes de contribuição</li>
-          <li>PPP e laudos da empresa, se trabalhou em atividade insalubre ou perigosa</li>
-          <li>Documentos de trabalho rural, se já trabalhou na roça</li>
-        </ul>
-      </div>
-    </div>
-  </article>
 
   <article class="momento-art" id="m-roca" hidden>
     <p class="rotulo">Aposentadoria rural e outros benefícios do segurado especial</p>
@@ -284,6 +392,31 @@
         </ul>
       </div>
     </div>
+    <p class="momento-pagina"><a class="link" href="/beneficios/trabalhador-rural">Abrir esta orientação em página própria →</a></p>
+  </article>
+
+  <article class="momento-art" id="m-doenca" hidden>
+    <p class="rotulo">Auxílio-doença, aposentadoria por invalidez e auxílio-acidente</p>
+    <h2>Doença, invalidez ou acidente</h2>
+    <div class="momento-grade">
+      <div>
+        <h3>Quem pode ter direito</h3>
+        <p>Quem é segurado do INSS, ou seja, contribui ou contribuiu há pouco tempo, e ficou sem condições de trabalhar por doença ou acidente. Quem ficou com sequela de acidente que reduz a capacidade de trabalho pode ter direito ao auxílio-acidente.</p>
+        <h3>Próximo passo</h3>
+        <p>O INSS marca uma perícia médica. Ajudamos a organizar a documentação médica antes dela, porque é o que o perito vai analisar.</p>
+      </div>
+      <div>
+        <h3>Documentos para separar</h3>
+        <ul class="lista-docs">
+          <li>Documento com foto e CPF</li>
+          <li>Laudos e atestados médicos, de preferência com o CID da doença</li>
+          <li>Exames, receitas e relatórios de internação</li>
+          <li>Carteira de trabalho ou carnês de contribuição</li>
+          <li>Carta do INSS, se o pedido já tiver sido feito</li>
+        </ul>
+      </div>
+    </div>
+    <p class="momento-pagina"><a class="link" href="/beneficios/auxilio-doenca-e-invalidez">Abrir esta orientação em página própria →</a></p>
   </article>
 
   <article class="momento-art" id="m-bpc" hidden>
@@ -307,6 +440,31 @@
         </ul>
       </div>
     </div>
+    <p class="momento-pagina"><a class="link" href="/beneficios/bpc-loas">Abrir esta orientação em página própria →</a></p>
+  </article>
+
+  <article class="momento-art" id="m-apos" hidden>
+    <p class="rotulo">Por idade, por tempo de contribuição, especial, híbrida e da pessoa com deficiência</p>
+    <h2>Aposentadoria</h2>
+    <div class="momento-grade">
+      <div>
+        <h3>Quem pode ter direito</h3>
+        <p>Quem atinge a idade mínima e o tempo de contribuição definidos em lei, ou se encaixa numa das regras de transição. Quem trabalhou exposto a agentes nocivos à saúde, ou tem deficiência, pode ter regras próprias.</p>
+        <h3>Próximo passo</h3>
+        <p>Analisamos o seu CNIS, o cadastro de contribuições do INSS, para conferir se está completo e descobrir qual regra é a melhor para você.</p>
+      </div>
+      <div>
+        <h3>Documentos para separar</h3>
+        <ul class="lista-docs">
+          <li>Documento com foto e CPF</li>
+          <li>Todas as carteiras de trabalho, inclusive as antigas</li>
+          <li>Carnês e comprovantes de contribuição</li>
+          <li>PPP e laudos da empresa, se trabalhou em atividade insalubre ou perigosa</li>
+          <li>Documentos de trabalho rural, se já trabalhou na roça</li>
+        </ul>
+      </div>
+    </div>
+    <p class="momento-pagina"><a class="link" href="/beneficios/aposentadoria">Abrir esta orientação em página própria →</a></p>
   </article>
 
   <article class="momento-art" id="m-pensao" hidden>
@@ -330,6 +488,7 @@
         </ul>
       </div>
     </div>
+    <p class="momento-pagina"><a class="link" href="/beneficios/pensao-por-morte">Abrir esta orientação em página própria →</a></p>
   </article>
 
   <article class="momento-art" id="m-mater" hidden>
@@ -352,6 +511,7 @@
         </ul>
       </div>
     </div>
+    <p class="momento-pagina"><a class="link" href="/beneficios/salario-maternidade">Abrir esta orientação em página própria →</a></p>
   </article>
 
   <article class="momento-art" id="m-revisao" hidden>
@@ -373,6 +533,7 @@
         </ul>
       </div>
     </div>
+    <p class="momento-pagina"><a class="link" href="/beneficios/revisao-e-planejamento">Abrir esta orientação em página própria →</a></p>
   </article>
 
   <article class="momento-art" id="m-negou" hidden>
@@ -395,6 +556,7 @@
         </ul>
       </div>
     </div>
+    <p class="momento-pagina"><a class="link" href="/beneficios/negativa-do-inss">Abrir esta orientação em página própria →</a></p>
   </article>
 
   <div class="janela-acoes">
@@ -478,7 +640,7 @@
     <div class="unidades">
       <div class="unidade">
         <h3>Maceió</h3>
-        <p class="unidade-end">Rua Sete de Setembro, nº 188<br>Centro · CEP 57020-700</p>
+        <p class="unidade-end">Rua Sete de Setembro, nº&nbsp;188<br>Centro · CEP 57020-700</p>
         <p class="unidade-hora">Segunda a quinta, das 9h às 17h</p>
         <div class="unidade-acoes">
           <a class="btn btn-contorno" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Sete+de+Setembro+188+Centro+Macei%C3%B3+AL+57020-700" target="_blank" rel="noopener">Abrir no Google Maps</a>
@@ -487,7 +649,7 @@
       </div>
       <div class="unidade">
         <h3>União dos Palmares</h3>
-        <p class="unidade-end">Rua Dr. Antônio Arecipo, nº 227<br>Empresarial Dona Dora, Sala 02 · Centro</p>
+        <p class="unidade-end">Rua Dr. Antônio Arecipo, nº&nbsp;227<br>Empresarial Dona Dora, Sala 02 · Centro</p>
         <p class="unidade-hora">Segunda a sexta, das 8h às 13h</p>
         <div class="unidade-acoes">
           <a class="btn btn-contorno" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Dr.+Ant%C3%B4nio+Arecipo+227+Centro+Uni%C3%A3o+dos+Palmares+AL+57800-000" target="_blank" rel="noopener">Abrir no Google Maps</a>
@@ -517,7 +679,7 @@
       </details>
       <details data-busca="advogado obrigatório meu inss 135 pedir sozinho">
         <summary>Preciso de advogado para pedir um benefício no INSS?</summary>
-        <p>Não é obrigatório. O pedido pode ser feito pelo <a href="https://meu.inss.gov.br/" data-externo>Meu INSS</a> ou pelo telefone 135, e o INSS não cobra para receber o pedido. O acompanhamento de um advogado ajuda a escolher o benefício certo, reunir as provas antes e diminuir o risco de negativa por falta de documento.</p>
+        <p>Não é obrigatório. O pedido pode ser feito pelo <a href="https://meu.inss.gov.br/" data-externo>Meu INSS</a> ou pelo telefone 135, e o INSS não cobra para receber o pedido. O acompanhamento de um advogado ajuda a escolher o benefício certo, reunir as provas antes e evitar negativa por falta de documento.</p>
       </details>
       <details data-busca="negou negado negada indeferido recurso prazo carta">
         <summary>O INSS negou meu pedido. O que eu faço?</summary>
@@ -556,7 +718,10 @@
 <footer class="rodape" id="rodape">
   <div class="rodape-in">
     <div class="rodape-marca">
-      <img src="/img/logo-chapado-ouro.png" alt="Ribeiro, Vilela & Ribeiro Advogados Associados" width="1400" height="169">
+      <picture>
+        <source srcset="/img/logo-chapado-ouro-600.webp" type="image/webp">
+        <img src="/img/logo-chapado-ouro-600.png" alt="Ribeiro, Vilela & Ribeiro Advogados Associados" width="600" height="72" loading="lazy">
+      </picture>
       <p>Advocacia previdenciária em Maceió e União dos Palmares, Alagoas.</p>
     </div>
     <div>

@@ -131,6 +131,7 @@
   // ---------- mosaico: cada bloco abre a sua situação ----------
   const janelaMomento = document.getElementById("janela-momento");
   function abrirMomento(id) {
+    if (!janelaMomento) return;
     janelaMomento.querySelectorAll(".momento-art").forEach(function (art) { art.hidden = art.id !== id; });
     janelaMomento.setAttribute("aria-labelledby", id + "-tit");
     const tit = janelaMomento.querySelector("#" + id + " h2");
@@ -138,14 +139,19 @@
     janelaMomento.showModal();
     janelaMomento.scrollTop = 0;
   }
+  // cada assunto é um link para a página própria (para o Google); o clique comum abre a janela aqui mesmo
   document.querySelectorAll("[data-momento]").forEach(function (b) {
-    b.addEventListener("click", function () { abrirMomento(b.dataset.momento); });
+    b.addEventListener("click", function (e) {
+      if (!janelaMomento || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey || e.button !== 0) return;
+      e.preventDefault();
+      abrirMomento(b.dataset.momento);
+    });
   });
 
   // ---------- busca "Como podemos ajudar?" ----------
   const campo = document.getElementById("busca");
   if (campo) {
-    const blocos = Array.from(document.querySelectorAll("button[data-momento]"));
+    const blocos = Array.from(document.querySelectorAll("[data-momento]"));
     const perguntas = Array.from(document.querySelectorAll("#duvidas details"));
     const resultado = document.querySelector("[data-busca-resultado]");
     const normal = function (s) { return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); };
@@ -204,6 +210,20 @@
     });
   });
   window.addEventListener("afterprint", function () { document.body.classList.remove("imprimindo"); });
+  document.querySelectorAll("[data-imprimir-pagina]").forEach(function (b) {
+    b.addEventListener("click", function () { window.print(); });
+  });
+
+  // ---------- WhatsApp flutuante: some quando outro botão de WhatsApp já está na tela ----------
+  const flutuante = document.querySelector(".whats-flutuante");
+  if (flutuante && "IntersectionObserver" in window) {
+    const visiveis = new Set();
+    const obs = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (en) { en.isIntersecting ? visiveis.add(en.target) : visiveis.delete(en.target); });
+      flutuante.classList.toggle("recolhido", visiveis.size > 0);
+    });
+    document.querySelectorAll('main a[href*="wa.me"], .rodape a[href*="wa.me"]').forEach(function (a) { obs.observe(a); });
+  }
 
   // ---------- Libras (VLibras, do governo federal) ----------
   if (window.VLibras) {

@@ -137,7 +137,7 @@ dl, dd { margin: 0; }
 
 .indice { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; column-gap: 5rem; border-bottom: 1px solid var(--filete); }
 .indice li { border-top: 1px solid var(--filete); }
-.item { width: 100%; display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; align-items: start; padding: 1.6rem 0; background: none; border: 0; text-align: left; cursor: pointer; color: inherit; }
+.item { width: 100%; display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; align-items: start; padding: 1.6rem 0; background: none; border: 0; text-align: left; cursor: pointer; color: inherit; text-decoration: none; }
 .item-txt strong { display: block; font-family: var(--serifa); font-weight: 500; font-size: 1.625rem; line-height: 1.25; color: var(--noite); }
 .item-txt small { display: block; margin-top: .4rem; font-size: 1.0625rem; line-height: 1.5; color: var(--texto-2); }
 .item-seta { font-size: 1.375rem; color: var(--esmeralda); padding-top: .15rem; }
@@ -233,6 +233,33 @@ dl, dd { margin: 0; }
 .mapa { position: relative; border: 1px solid var(--filete); background: var(--pedra); }
 .mapa iframe { position: relative; display: block; width: 100%; aspect-ratio: 4 / 3.4; border: 0; }
 .mapa-reserva { position: absolute; inset: 0; display: grid; place-items: center; padding: 2rem; text-align: center; font-family: var(--serifa); font-size: 1.25rem; color: var(--texto-2); }
+/* 28/10/2026, auditoria: páginas das cidades mais completas e uma página para cada assunto */
+.pagina-topo .rotulo a { color: inherit; text-decoration: none; }
+.pagina-topo .rotulo a:hover { text-decoration: underline; }
+.cidade-mais, .assunto-mais { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+.cidade-mais h2 { font-size: 2.25rem; }
+.cidade-mais p { margin-top: 1rem; color: var(--texto-2); }
+.cidade-mais p .link { display: inline-flex; align-items: center; min-height: 2.75rem; }
+.cidade-advogados { list-style: none; margin: 1.5rem 0 0; padding: 0; border-top: 1px solid var(--filete); }
+.cidade-advogados li { padding: 1rem 0; border-bottom: 1px solid var(--filete); }
+.cidade-advogados strong { display: block; font-family: var(--serifa); font-weight: 500; font-size: 1.375rem; color: var(--noite); }
+.cidade-advogados .oab { display: block; margin-top: .3rem; font-size: .9375rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--esmeralda); }
+.cidade-assuntos, .assunto-lista { list-style: none; margin: 2.5rem 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; column-gap: 5rem; border-bottom: 1px solid var(--filete); }
+.cidade-assuntos li, .assunto-lista li { border-top: 1px solid var(--filete); }
+.cidade-assuntos a, .assunto-lista a { display: flex; align-items: center; min-height: 3.5rem; padding: .6rem 0; font-family: var(--serifa); font-size: 1.375rem; color: var(--noite); text-decoration: none; }
+.cidade-assuntos a::after, .assunto-lista a::after { content: "→"; margin-left: auto; padding-left: 1rem; font-family: var(--sans); color: var(--esmeralda); }
+.cidade-assuntos a:hover, .assunto-lista a:hover { color: var(--esmeralda); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; }
+.assunto-mais .assunto-lista { grid-template-columns: 1fr; margin-top: 1.5rem; }
+.assunto-mais-tit { font-size: 2rem; }
+.assunto .assunto-grade { margin-top: 0; }
+.secao:has(> .assunto) { padding-top: 4rem; }
+.assunto .assunto-grade p { font-size: 1.1875rem; }
+.assunto-acoes { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--filete); display: flex; flex-wrap: wrap; gap: .9rem; }
+.assunto-nota { margin-top: 1.75rem; max-width: 40em; font-size: 1.0625rem; color: var(--texto-2); }
+.momento-pagina { margin-top: 1.75rem; }
+.momento-pagina .link { display: inline-flex; align-items: center; min-height: 2.75rem; font-size: 1.0625rem; }
+.foto-celular { display: none; margin: 0; }
+
 .lista-docs { list-style: none; margin: .3rem 0 0; padding: 0; }
 .lista-docs li { position: relative; padding: .65rem 0 .65rem 1.4rem; border-bottom: 1px solid var(--filete); }
 .lista-docs li:last-child { border-bottom: 0; }
@@ -246,6 +273,9 @@ dl, dd { margin: 0; }
 .rodape-tit { font-family: var(--sans); font-size: .875rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ouro-claro); margin-bottom: 1rem; }
 .rodape p { margin-top: .6rem; line-height: 1.55; }
 .rodape a { color: var(--papel); }
+/* 28/10/2026, auditoria: links do rodapé com altura de toque de 44 px, para o dedo não errar */
+.rodape-in a, .rodape-in .link-rodape { display: inline-block; padding: .6rem 0; }
+.rodape-in p:has(> a, > button) { margin-top: 0; }
 .rodape a:hover { color: var(--ouro-claro); }
 .rodape .oab { color: var(--ouro-claro); font-size: .9375rem; }
 .rodape-base::before { content: ""; display: block; border-top: 1px solid rgba(228, 200, 134, .25); margin-bottom: 1.75rem; }
@@ -255,6 +285,8 @@ dl, dd { margin: 0; }
 /* ---------- WhatsApp flutuante (o único) ---------- */
 .whats-flutuante { position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 60; width: 3.5rem; height: 3.5rem; border-radius: 2px; display: grid; place-items: center; background: var(--esmeralda); color: #fff; }
 .whats-flutuante:hover { background: var(--noite); }
+/* some quando já há outro botão de WhatsApp na tela (sem animação) */
+.whats-flutuante.recolhido { visibility: hidden; }
 @media (min-width: 1181px) { .whats-flutuante { display: none; } } /* no computador o WhatsApp já está no topo fixo */
 .whats-flutuante svg { width: 1.6rem; height: 1.6rem; }
 
@@ -318,6 +350,7 @@ html[data-contraste] img { filter: grayscale(1) brightness(1.6); }
   .canais { grid-template-columns: 1fr 1fr; }
   .canais > a { grid-column: 1 / -1; }
   .rodape-in { grid-template-columns: 1fr 1fr; }
+  .cidade-mais, .assunto-mais { grid-template-columns: 1fr; gap: 3.5rem; }
 }
 
 /* ---------- celular ---------- */
@@ -357,6 +390,18 @@ html[data-contraste] img { filter: grayscale(1) brightness(1.6); }
   .janela h2 { font-size: 1.75rem; }
   .momento-grade { grid-template-columns: 1fr; gap: 1.5rem; }
   .janela-acoes .btn { width: 100%; }
+  /* 28/10/2026, auditoria: no celular a foto vem depois da ficha (telefone e OAB na primeira tela) */
+  .hero-foto { display: none; }
+  .hero { padding-bottom: 2.5rem; }
+  .ficha-in > div:nth-child(4) { order: -2; border-top: 0; }
+  .ficha-in > div:nth-child(3) { order: -1; border-top: 1px solid var(--filete); }
+  .foto-celular { display: block; }
+  .foto-celular img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: center 35%; }
+  /* endereço não fica embaixo do botão flutuante do WhatsApp */
+  .cidade-end, .unidade-end { padding-right: 4rem; }
+  .cidade-assuntos { grid-template-columns: 1fr; }
+  .cidade-mais h2, .assunto-mais-tit { font-size: 1.875rem; }
+  .assunto-acoes .btn { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -367,5 +412,5 @@ html[data-contraste] img { filter: grayscale(1) brightness(1.6); }
   body.imprimindo > *:not(#impressao) { display: none !important; }
   body.imprimindo #impressao { display: block; font-size: 12pt; color: #000; }
   #impressao .momento-grade { display: block; }
-  .topo, .rodape, .whats-flutuante, .pular, [vw] { display: none !important; }
+  .topo, .rodape, .whats-flutuante, .pular, [vw], .assunto-acoes, .secao-pedra { display: none !important; }
 }

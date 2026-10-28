@@ -7,6 +7,7 @@
 <meta name="description" content="Unidade de União dos Palmares do escritório Ribeiro, Vilela & Ribeiro, no Empresarial Dona Dora, Centro. Aposentadoria rural, BPC/LOAS, auxílio-doença, pensão por morte e recursos contra negativas do INSS.">
 <meta name="theme-color" content="#052319">
 <link rel="canonical" href="https://ribeirovilelaribeiro.com.br/uniao-dos-palmares">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/img/favicon.png">
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <meta property="og:type" content="website">
@@ -38,12 +39,29 @@
 {
   "@context": "https://schema.org",
   "@type": "LegalService",
+  "@id": "https://ribeirovilelaribeiro.com.br/uniao-dos-palmares#unidade",
   "name": "Ribeiro, Vilela & Ribeiro Advogados Associados · União dos Palmares",
   "url": "https://ribeirovilelaribeiro.com.br/uniao-dos-palmares",
   "image": "https://ribeirovilelaribeiro.com.br/img/og.jpg",
   "telephone": "+55 82 99327-8827",
   "areaServed": "União dos Palmares",
-  "openingHours": "Mo-Fr 08:00-13:00",
+  "parentOrganization": {
+    "@id": "https://ribeirovilelaribeiro.com.br/#escritorio"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "13:00"
+    }
+  ],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Rua Dr. Antônio Arecipo, 227, Empresarial Dona Dora, Sala 02, Centro",
@@ -52,6 +70,54 @@
     "postalCode": "57800-000",
     "addressCountry": "BR"
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Preciso ir a Maceió para ser atendido?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. A unidade de União dos Palmares atende de segunda a sexta, das 8h às 13h. A primeira conversa também pode ser pelo WhatsApp ou por telefone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quem trabalha na roça e nunca pagou carnê tem direito?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pode ter. O segurado especial, que trabalha no campo em regime de economia familiar, pode ter direito a benefícios do INSS sem ter pago carnê. O que conta é provar o tempo de atividade rural."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso vir acompanhado de um familiar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pode. Se vier ao escritório, pode vir acompanhado de um familiar. Os passos seguintes, como a entrega de documentos e a assinatura, são combinados com você."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que levar no primeiro atendimento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nada é obrigatório. Se tiver, a carta do INSS ajuda. Depois, explicamos quais documentos separar para a sua situação."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O escritório é do governo ou do INSS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. O Ribeiro, Vilela & Ribeiro é um escritório de advocacia particular, formado por advogados inscritos na OAB de Alagoas. Não é órgão do governo e não tem ligação com o INSS."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -66,7 +132,10 @@
 <header class="topo">
   <div class="topo-in">
     <a class="marca" href="/" aria-label="Ribeiro, Vilela & Ribeiro, página inicial">
-      <img src="/img/logo-cabecalho-ouro.png" alt="Ribeiro, Vilela & Ribeiro Advogados Associados" width="1399" height="168">
+      <picture>
+        <source srcset="/img/logo-cabecalho-ouro-720.webp" type="image/webp">
+        <img src="/img/logo-cabecalho-ouro-720.png" alt="Ribeiro, Vilela & Ribeiro Advogados Associados" width="720" height="86">
+      </picture>
     </a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
     <div class="menu" id="menu">
@@ -112,7 +181,7 @@
   <div class="secao-in cidade">
     <div class="cidade-dados">
       <h2>Endereço</h2>
-      <p class="cidade-end">Rua Dr. Antônio Arecipo, nº 227<br>Empresarial Dona Dora, Sala 02<br>Centro · CEP 57800-000<br>União dos Palmares/AL</p>
+      <p class="cidade-end">Rua Dr. Antônio Arecipo, nº&nbsp;227<br>Empresarial Dona Dora, Sala 02<br>Centro · CEP 57800-000<br>União dos Palmares/AL</p>
       <h2>Horário</h2>
       <p>Segunda a sexta, das 8h às 13h. Combine o seu horário pelo WhatsApp antes de vir, para ser atendido sem espera.</p>
       <div class="cidade-acoes">
@@ -121,13 +190,80 @@
         </a>
         <a class="btn btn-linha" href="https://www.google.com/maps/search/?api=1&query=Rua+Dr.+Ant%C3%B4nio+Arecipo+227+Centro+Uni%C3%A3o+dos+Palmares+AL" target="_blank" rel="noopener">Abrir no Google Maps</a>
       </div>
-      <h2>Trabalhador rural</h2>
-      <p>Quem trabalha ou trabalhou na roça pode ter direito a benefícios do INSS mesmo sem ter pago carnê. Veja <a href="/#beneficios">que documentos separar</a>.</p>
     </div>
     <div class="mapa">
-      <p class="mapa-reserva">Rua Dr. Antônio Arecipo, nº 227, Centro, União dos Palmares/AL</p>
+      <p class="mapa-reserva">Rua Dr. Antônio Arecipo, nº&nbsp;227, Centro, União dos Palmares/AL</p>
       <iframe title="Mapa da unidade de União dos Palmares" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         src="https://www.google.com/maps?q=Rua+Dr.+Ant%C3%B4nio+Arecipo,+227,+Centro,+Uni%C3%A3o+dos+Palmares+-+AL,+57800-000&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao-pedra">
+  <div class="secao-in cidade-mais">
+    <div>
+      <p class="rotulo">Trabalhador rural</p>
+      <h2>Quem vive da roça</h2>
+      <p>Quem trabalha no campo em regime de economia familiar, o chamado segurado especial, pode ter direito a benefícios do INSS mesmo sem ter pago carnê. O que conta é provar o tempo de atividade rural.</p>
+      <p>Montamos a autodeclaração e organizamos as provas por período. Quando os documentos não bastam, a prova pode ser completada com testemunhas.</p>
+      <p><a class="link" href="/beneficios/trabalhador-rural">Ver os documentos para separar →</a></p>
+    </div>
+    <div>
+      <p class="rotulo">Os advogados</p>
+      <h2>Quem responde pelo escritório</h2>
+      <ul class="cidade-advogados">
+        <li><strong>Thiago Pontes de Miranda Carvalho Vilela</strong><span class="oab">OAB/AL 22.792</span></li>
+        <li><strong>Gleyson Jorge Holanda Ribeiro</strong><span class="oab">OAB/AL 6.556</span></li>
+      </ul>
+      <p>Sócios do Ribeiro, Vilela &amp; Ribeiro, inscritos na OAB de Alagoas. <a href="/seguranca">Como confirmar que é mesmo o escritório</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="secao-in">
+    <p class="rotulo">Benefícios</p>
+    <h2>Em que situação você está?</h2>
+    <ul class="cidade-assuntos">
+      <li><a href="/beneficios/trabalhador-rural">Trabalho rural e segurado especial</a></li>
+      <li><a href="/beneficios/bpc-loas">BPC/LOAS</a></li>
+      <li><a href="/beneficios/auxilio-doenca-e-invalidez">Doença, invalidez ou acidente</a></li>
+      <li><a href="/beneficios/aposentadoria">Aposentadoria</a></li>
+      <li><a href="/beneficios/pensao-por-morte">Pensão por morte e auxílio-reclusão</a></li>
+      <li><a href="/beneficios/salario-maternidade">Salário-maternidade</a></li>
+      <li><a href="/beneficios/revisao-e-planejamento">Revisão e planejamento</a></li>
+      <li><a href="/beneficios/negativa-do-inss">Negativa ou corte do INSS</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="secao" id="duvidas">
+  <div class="secao-in duvidas-grade">
+    <div class="duvidas-cab">
+      <h2>Dúvidas de quem é atendido em União dos Palmares</h2>
+      <p>Não achou a sua dúvida? Ligue para <a href="tel:+5582993278827">(82) 99327-8827</a>.</p>
+    </div>
+    <div class="duvidas">
+      <details>
+        <summary>Preciso ir a Maceió para ser atendido?</summary>
+        <p>Não. A unidade de União dos Palmares atende de segunda a sexta, das 8h às 13h. A primeira conversa também pode ser pelo WhatsApp ou por telefone.</p>
+      </details>
+      <details>
+        <summary>Quem trabalha na roça e nunca pagou carnê tem direito?</summary>
+        <p>Pode ter. O segurado especial, que trabalha no campo em regime de economia familiar, pode ter direito a benefícios do INSS sem ter pago carnê. O que conta é provar o tempo de atividade rural.</p>
+      </details>
+      <details>
+        <summary>Posso vir acompanhado de um familiar?</summary>
+        <p>Pode. Se vier ao escritório, pode vir acompanhado de um familiar. Os passos seguintes, como a entrega de documentos e a assinatura, são combinados com você.</p>
+      </details>
+      <details>
+        <summary>O que levar no primeiro atendimento?</summary>
+        <p>Nada é obrigatório. Se tiver, a carta do INSS ajuda. Depois, explicamos quais documentos separar para a sua situação.</p>
+      </details>
+      <details>
+        <summary>O escritório é do governo ou do INSS?</summary>
+        <p>Não. O Ribeiro, Vilela &amp; Ribeiro é um escritório de advocacia particular, formado por advogados inscritos na OAB de Alagoas. Não é órgão do governo e não tem ligação com o INSS.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -136,7 +272,10 @@
 <footer class="rodape" id="rodape">
   <div class="rodape-in">
     <div class="rodape-marca">
-      <img src="/img/logo-chapado-ouro.png" alt="Ribeiro, Vilela & Ribeiro Advogados Associados" width="1400" height="169">
+      <picture>
+        <source srcset="/img/logo-chapado-ouro-600.webp" type="image/webp">
+        <img src="/img/logo-chapado-ouro-600.png" alt="Ribeiro, Vilela & Ribeiro Advogados Associados" width="600" height="72" loading="lazy">
+      </picture>
       <p>Advocacia previdenciária em Maceió e União dos Palmares, Alagoas.</p>
     </div>
     <div>

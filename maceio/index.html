@@ -7,6 +7,7 @@
 <meta name="description" content="Unidade de Maceió do escritório Ribeiro, Vilela & Ribeiro, na Rua Sete de Setembro, 188, Centro. Aposentadorias, BPC/LOAS, auxílio-doença, pensão por morte e recursos contra negativas do INSS.">
 <meta name="theme-color" content="#052319">
 <link rel="canonical" href="https://ribeirovilelaribeiro.com.br/maceio">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/img/favicon.png">
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <meta property="og:type" content="website">
@@ -38,12 +39,28 @@
 {
   "@context": "https://schema.org",
   "@type": "LegalService",
+  "@id": "https://ribeirovilelaribeiro.com.br/maceio#unidade",
   "name": "Ribeiro, Vilela & Ribeiro Advogados Associados · Maceió",
   "url": "https://ribeirovilelaribeiro.com.br/maceio",
   "image": "https://ribeirovilelaribeiro.com.br/img/og.jpg",
   "telephone": "+55 82 99327-8827",
   "areaServed": "Maceió",
-  "openingHours": "Mo-Th 09:00-17:00",
+  "parentOrganization": {
+    "@id": "https://ribeirovilelaribeiro.com.br/#escritorio"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday"
+      ],
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  ],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Rua Sete de Setembro, 188, Centro",
@@ -52,6 +69,54 @@
     "postalCode": "57020-700",
     "addressCountry": "BR"
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qual é o horário da unidade de Maceió?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Segunda a quinta, das 9h às 17h. Combine o seu horário pelo WhatsApp antes de vir, para ser atendido sem espera."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso ser atendido sem ir ao escritório?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A primeira conversa pode ser pelo WhatsApp ou por telefone. Os passos seguintes, como a entrega de documentos e a assinatura, são combinados com você."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que levar no primeiro atendimento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nada é obrigatório. Se tiver, a carta do INSS ajuda. Depois, explicamos quais documentos separar para a sua situação."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como funcionam os honorários?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Os honorários são explicados e combinados por escrito, em contrato, antes de qualquer contratação. Nada é cobrado sem que você saiba antes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O escritório é do governo ou do INSS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. O Ribeiro, Vilela & Ribeiro é um escritório de advocacia particular, formado por advogados inscritos na OAB de Alagoas. Não é órgão do governo e não tem ligação com o INSS."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -66,7 +131,10 @@
 <header class="topo">
   <div class="topo-in">
     <a class="marca" href="/" aria-label="Ribeiro, Vilela & Ribeiro, página inicial">
-      <img src="/img/logo-cabecalho-ouro.png" alt="Ribeiro, Vilela & Ribeiro Advogados Associados" width="1399" height="168">
+      <picture>
+        <source srcset="/img/logo-cabecalho-ouro-720.webp" type="image/webp">
+        <img src="/img/logo-cabecalho-ouro-720.png" alt="Ribeiro, Vilela & Ribeiro Advogados Associados" width="720" height="86">
+      </picture>
     </a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
     <div class="menu" id="menu">
@@ -112,7 +180,7 @@
   <div class="secao-in cidade">
     <div class="cidade-dados">
       <h2>Endereço</h2>
-      <p class="cidade-end">Rua Sete de Setembro, nº 188<br>Centro · CEP 57020-700<br>Maceió/AL</p>
+      <p class="cidade-end">Rua Sete de Setembro, nº&nbsp;188<br>Centro · CEP 57020-700<br>Maceió/AL</p>
       <h2>Horário</h2>
       <p>Segunda a quinta, das 9h às 17h. Combine o seu horário pelo WhatsApp antes de vir, para ser atendido sem espera.</p>
       <div class="cidade-acoes">
@@ -121,13 +189,80 @@
         </a>
         <a class="btn btn-linha" href="https://www.google.com/maps/search/?api=1&query=Rua+Sete+de+Setembro+188+Centro+Macei%C3%B3+AL" target="_blank" rel="noopener">Abrir no Google Maps</a>
       </div>
-      <h2>Como podemos ajudar</h2>
-      <p>Veja na página inicial <a href="/#beneficios">os benefícios em que atuamos</a>, com a lista de documentos de cada um.</p>
     </div>
     <div class="mapa">
-      <p class="mapa-reserva">Rua Sete de Setembro, nº 188, Centro, Maceió/AL</p>
+      <p class="mapa-reserva">Rua Sete de Setembro, nº&nbsp;188, Centro, Maceió/AL</p>
       <iframe title="Mapa da unidade de Maceió" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         src="https://www.google.com/maps?q=Rua+Sete+de+Setembro,+188,+Centro,+Macei%C3%B3+-+AL,+57020-700&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao-pedra">
+  <div class="secao-in cidade-mais">
+    <div>
+      <p class="rotulo">Como funciona</p>
+      <h2>Do primeiro contato à decisão</h2>
+      <p>Você conta a sua situação pelo WhatsApp, por telefone ou aqui na unidade, e explicamos quais caminhos existem. Depois, conferimos o CNIS, as carteiras de trabalho, os laudos e as demais provas, e dizemos o que ainda falta reunir.</p>
+      <p>Fazemos o pedido no INSS e acompanhamos exigências, perícias e avaliações até a decisão. Se o pedido for negado, avaliamos com você o recurso administrativo ou a ação na Justiça Federal.</p>
+      <p><a class="link" href="/#como-trabalhamos">Ver as etapas →</a></p>
+    </div>
+    <div>
+      <p class="rotulo">Os advogados</p>
+      <h2>Quem responde pelo escritório</h2>
+      <ul class="cidade-advogados">
+        <li><strong>Thiago Pontes de Miranda Carvalho Vilela</strong><span class="oab">OAB/AL 22.792</span></li>
+        <li><strong>Gleyson Jorge Holanda Ribeiro</strong><span class="oab">OAB/AL 6.556</span></li>
+      </ul>
+      <p>Sócios do Ribeiro, Vilela &amp; Ribeiro, inscritos na OAB de Alagoas. <a href="/seguranca">Como confirmar que é mesmo o escritório</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="secao">
+  <div class="secao-in">
+    <p class="rotulo">Benefícios</p>
+    <h2>Em que situação você está?</h2>
+    <ul class="cidade-assuntos">
+      <li><a href="/beneficios/aposentadoria">Aposentadoria</a></li>
+      <li><a href="/beneficios/auxilio-doenca-e-invalidez">Doença, invalidez ou acidente</a></li>
+      <li><a href="/beneficios/bpc-loas">BPC/LOAS</a></li>
+      <li><a href="/beneficios/pensao-por-morte">Pensão por morte e auxílio-reclusão</a></li>
+      <li><a href="/beneficios/salario-maternidade">Salário-maternidade</a></li>
+      <li><a href="/beneficios/revisao-e-planejamento">Revisão e planejamento</a></li>
+      <li><a href="/beneficios/trabalhador-rural">Trabalho rural e segurado especial</a></li>
+      <li><a href="/beneficios/negativa-do-inss">Negativa ou corte do INSS</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="secao" id="duvidas">
+  <div class="secao-in duvidas-grade">
+    <div class="duvidas-cab">
+      <h2>Dúvidas de quem é atendido em Maceió</h2>
+      <p>Não achou a sua dúvida? Ligue para <a href="tel:+5582993278827">(82) 99327-8827</a>.</p>
+    </div>
+    <div class="duvidas">
+      <details>
+        <summary>Qual é o horário da unidade de Maceió?</summary>
+        <p>Segunda a quinta, das 9h às 17h. Combine o seu horário pelo WhatsApp antes de vir, para ser atendido sem espera.</p>
+      </details>
+      <details>
+        <summary>Posso ser atendido sem ir ao escritório?</summary>
+        <p>A primeira conversa pode ser pelo WhatsApp ou por telefone. Os passos seguintes, como a entrega de documentos e a assinatura, são combinados com você.</p>
+      </details>
+      <details>
+        <summary>O que levar no primeiro atendimento?</summary>
+        <p>Nada é obrigatório. Se tiver, a carta do INSS ajuda. Depois, explicamos quais documentos separar para a sua situação.</p>
+      </details>
+      <details>
+        <summary>Como funcionam os honorários?</summary>
+        <p>Os honorários são explicados e combinados por escrito, em contrato, antes de qualquer contratação. Nada é cobrado sem que você saiba antes.</p>
+      </details>
+      <details>
+        <summary>O escritório é do governo ou do INSS?</summary>
+        <p>Não. O Ribeiro, Vilela &amp; Ribeiro é um escritório de advocacia particular, formado por advogados inscritos na OAB de Alagoas. Não é órgão do governo e não tem ligação com o INSS.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -136,7 +271,10 @@
 <footer class="rodape" id="rodape">
   <div class="rodape-in">
     <div class="rodape-marca">
-      <img src="/img/logo-chapado-ouro.png" alt="Ribeiro, Vilela & Ribeiro Advogados Associados" width="1400" height="169">
+      <picture>
+        <source srcset="/img/logo-chapado-ouro-600.webp" type="image/webp">
+        <img src="/img/logo-chapado-ouro-600.png" alt="Ribeiro, Vilela & Ribeiro Advogados Associados" width="600" height="72" loading="lazy">
+      </picture>
       <p>Advocacia previdenciária em Maceió e União dos Palmares, Alagoas.</p>
     </div>
     <div>

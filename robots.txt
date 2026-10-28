@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ribeirovilelaribeiro.com.br/sitemap.xml
