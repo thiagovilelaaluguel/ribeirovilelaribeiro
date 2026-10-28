@@ -1,6 +1,9 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    { "source": "/google941efafa138709f3.html", "destination": "/google941efafa138709f3.txt" }
+  ],
   "redirects": [
     {
       "source": "/",
